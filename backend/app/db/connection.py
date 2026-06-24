@@ -11,7 +11,11 @@ class Base(DeclarativeBase):
     pass
 
 
-engine = create_engine(os.getenv("DATABASE_URL"))
+_db_url = os.getenv("DATABASE_URL", "")
+if _db_url.startswith("postgresql://"):
+    _db_url = _db_url.replace("postgresql://", "postgresql+psycopg://", 1)
+
+engine = create_engine(_db_url)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
