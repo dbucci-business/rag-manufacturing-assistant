@@ -5,9 +5,9 @@ language questions about manufacturing operations - standard operating
 procedures, troubleshooting guides, safety protocols, and KPI definitions -
 grounded in a synthetic internal knowledge base.
 
-**Live demo:** _[link to be added once deployed]_
+**Live demo:** https://rag-manufacturing-assistant.vercel.app
 
-**Status:** In active development - see DECISIONS.md for architectural
+**Status:** Deployed and live - see DECISIONS.md for architectural
 decisions and docs/ for full documentation.
 
 ---
@@ -41,8 +41,8 @@ See docs/architecture.md for a full diagram and component breakdown.
 
 | Layer | Technology |
 |---|---|
-| Frontend | React, Vite, Tailwind CSS |
-| Backend | FastAPI, Python 3.12 |
+| Frontend | React, Vite |
+| Backend | FastAPI, Python 3.14 |
 | Vector storage | PostgreSQL + pgvector (hosted on Supabase) |
 | LLM | OpenAI (gpt-4o-mini) |
 | Embeddings | OpenAI (text-embedding-3-small) |
