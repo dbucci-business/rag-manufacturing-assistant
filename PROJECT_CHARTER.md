@@ -27,25 +27,12 @@ the developer's prior data analyst experience in that domain.
 - This is not a multi-tenant or authenticated system
 - This is not optimized for scale beyond demo-level usage
 
-## Target Audience
-- Primary: AI hiring manager reviewing the GitHub repository and/or live demo
-- Secondary: The developer themselves, six months from now, needing to recall
-  why decisions were made
-- Tertiary: Any future AI assistant session helping extend or debug the project
-
 ## Success Criteria
 - [ ] Deployed and reachable via a public URL
 - [ ] Can ingest the synthetic document set and answer questions grounded in it
 - [ ] Developer can verbally walk through the entire pipeline without notes
 - [ ] Repository is clean enough that a stranger could understand it in 10 minutes
 - [ ] README includes a working demo link, architecture diagram, and setup steps
-
-## Constraints
-- Single developer, AI-assisted development
-- Approximately 2 weeks build time, 3 weeks absolute maximum
-- Developer has a strong SQL/data analytics background, limited prior AI
-  engineering experience
-- Must remain understandable to the developer — no black-box components
 
 ## Out of Scope (see docs/future_enhancements.md for details)
 - Authentication / user accounts
