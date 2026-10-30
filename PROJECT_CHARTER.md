@@ -1,62 +1,52 @@
 # Project Charter: Manufacturing Knowledge Assistant
 
 ## Purpose
-A Retrieval-Augmented Generation (RAG) application that answers natural language
-questions about manufacturing operations — SOPs, troubleshooting guides, safety
-protocols, and KPI definitions — using a synthetic document corpus that simulates
+A Retrieval-Augmented Generation (RAG) application that answers natural-language
+questions about manufacturing operations (SOPs, troubleshooting guides, safety
+protocols and KPI definitions) using a synthetic document corpus that simulates
 an internal enterprise knowledge base.
 
 ## Why This Project Exists
-Built as a portfolio project to demonstrate practical AI engineering competency
-(RAG architecture, embeddings, vector search, LLM integration, full-stack
-deployment) ahead of a referral-based interview for an AI Application Developer
-role. The project intentionally simulates a real manufacturing use case based on
-the developer's prior data analyst experience in that domain.
+I built this to learn how RAG systems work end to end: chunking, embeddings,
+vector search, LLM integration and deployment. I grounded it in manufacturing
+because that's the domain I work in as a data analyst, where plant knowledge
+often lives in scattered documents and in people's heads. That makes a knowledge
+assistant a realistic use case rather than a toy one.
+
+## How It Was Built
+This project uses AI-assisted development. I wrote the source documents, made
+the architectural decisions (recorded in DECISIONS.md), chose the chunking
+strategy and set up hosting across Vercel, Render and Supabase. AI coding tools
+wrote much of the implementation, directed by this charter and the decision log.
 
 ## Goals (in priority order)
-1. Demonstrate a working, end-to-end RAG pipeline a hiring manager can use live
-2. Be fully explainable by the developer in a technical interview — every
-   architectural decision must be one the developer understands and can defend
-3. Be deployed and publicly accessible, not just runnable locally
-4. Demonstrate professional software practices (documentation, structure, testing)
-5. Serve as a foundation the developer can extend after the interview if desired
+1. A working, end-to-end RAG pipeline anyone can try live
+2. Every architectural decision understood, documented and defensible
+3. Deployed and publicly accessible, not just runnable locally
+4. Clean, documented project structure
+5. A foundation to extend with the enhancements listed below
 
 ## Non-Goals
-- This is not a production system handling real manufacturing data
-- This is not an attempt to build the most sophisticated RAG architecture possible
-- This is not a multi-tenant or authenticated system
-- This is not optimized for scale beyond demo-level usage
-
-## Target Audience
-- Primary: AI hiring manager reviewing the GitHub repository and/or live demo
-- Secondary: The developer themselves, six months from now, needing to recall
-  why decisions were made
-- Tertiary: Any future AI assistant session helping extend or debug the project
+- Not a production system handling real manufacturing data
+- Not an attempt at the most sophisticated RAG architecture possible
+- Not a multi-tenant or authenticated system
+- Not optimized for scale beyond demo-level usage
 
 ## Success Criteria
-- [ ] Deployed and reachable via a public URL
-- [ ] Can ingest the synthetic document set and answer questions grounded in it
-- [ ] Developer can verbally walk through the entire pipeline without notes
-- [ ] Repository is clean enough that a stranger could understand it in 10 minutes
-- [ ] README includes a working demo link, architecture diagram, and setup steps
+- Deployed and reachable at a public URL
+- Answers questions grounded in the synthetic document set, with source citations
+- Every pipeline decision is documented in DECISIONS.md
+- A newcomer can understand the repository in 10 minutes
+- README includes a working demo link, architecture diagram and setup steps
 
-## Constraints
-- Single developer, AI-assisted development
-- Approximately 2 weeks build time, 3 weeks absolute maximum
-- Developer has a strong SQL/data analytics background, limited prior AI
-  engineering experience
-- Must remain understandable to the developer — no black-box components
-
-## Out of Scope (see docs/future_enhancements.md for details)
-- Authentication / user accounts
-- Multi-LLM provider support (architecture allows it, not implemented in v1)
-- Conversation history / multi-turn chat memory
+## Out of Scope (details in docs/future_enhancements.md)
+- Authentication and user accounts
+- Multi-LLM provider support (the architecture allows it; not implemented in v1)
+- Conversation history and multi-turn memory
 - Admin dashboard for document management
 
-## How to Use This Document
-This file is the entry point for understanding *why* this project exists and
-*what it is trying to achieve*. It should be read first — before any code,
-before DECISIONS.md, before the architecture docs — by anyone (human or AI
-assistant) picking up this project for the first time. If a proposed change
-conflicts with the goals or non-goals stated here, that conflict should be
-resolved before the change is made, not after.
+## Working in This Repo
+Read this charter first, before the code, DECISIONS.md or the architecture docs.
+If a proposed change conflicts with the goals or non-goals above, resolve that
+conflict before making the change. This applies to human contributors and to
+AI coding assistants alike.
