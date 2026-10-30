@@ -6,6 +6,7 @@ procedures, troubleshooting guides, safety protocols, and KPI definitions -
 grounded in a synthetic internal knowledge base.
 
 **Live demo:** https://rag-manufacturing-assistant.vercel.app
+Due to the nature of Render's free tier, please give up to 45 seconds to see an initial response from the assistant. 
 
 **Status:** Deployed and live - see DECISIONS.md for architectural
 decisions and docs/ for full documentation.
