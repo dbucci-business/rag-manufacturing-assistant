@@ -71,5 +71,4 @@ current scale - see DECISIONS.md D001 for the full reasoning.
 ## How to Use This Document
 
 When implementation reveals a good idea that doesn't fit the current scope,
-add it here rather than implementing it immediately. This keeps the MUST HAVE
-scope honest and prevents quiet scope creep during the build.
+add it here rather than implementing it immediately.
